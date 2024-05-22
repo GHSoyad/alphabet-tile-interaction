@@ -17,12 +17,12 @@ const App = () => {
     setOutputString(newString);
 
     // append the new string in HTML element with mentioned id
-    document.getElementById('outputString').innerHTML = newString;
+    document.getElementById('outputString').innerText = newString;
   }
 
   const resetString = () => {
     setOutputString("");
-    document.getElementById('outputString').innerHTML = "";
+    document.getElementById('outputString').innerText = "";
   }
 
   return (
@@ -42,8 +42,9 @@ const App = () => {
       </div>
       <div className="output">
         <h3>Output String :</h3>
-        {/* {outputString} */}
-        <p id="outputString"></p>
+        <p id="outputString">
+          {/* {outputString} */}
+        </p>
 
         {
           outputString &&
